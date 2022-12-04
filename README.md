@@ -12,6 +12,21 @@ Currently only one simple sensor:
 4. Add sensor code to configuration.yaml
 5. Add entity to dashboard etc.
 
+## UI example
+
+'''
+type: entities
+entities:
+  - entity: sensor.fingrid_power_system_state
+
+type: history-graph
+entities:
+  - entity: sensor.fingrid_power_system_state
+    name: Fingrid
+'''
+
+![Fingrid power status dashboard example!](/examples/haas-fingrid-power-status.jpg "Fingrid power status dashboard example")
+
 ## Links
 - Fingrid open API https://api.fingrid.fi/ 
 - Fingrdi API instructions: https://data.fingrid.fi/fi/pages/api
