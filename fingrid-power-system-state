@@ -1,20 +1,23 @@
-# variable id: 209, 
-# https://data.fingrid.fi/fi/dataset/power-system-state-real-time-data/resource/3373a0ad-d450-4942-99bc-14f82d02f9f6
 rest:
   - resource: https://api.fingrid.fi/v1/variable/209/event/json
     headers:
       Accept: application/json
       x-api-key: !secret fingrid_api_key
     scan_interval: 600
-    sensor: 
-      - name: "Fingrid_Power_system_state"
+    sensor: # variable id: 209, https://data.fingrid.fi/fi/dataset/power-system-state-real-time-data
+      - name: "Fingrid Power system state"
+        unique_id: "fingrid_api_209_power_system_state"
         icon: mdi:transmission-tower
         value_template: >-
           {% set mapper =  {
-            '1' : 'Normaali',
-            '2' : 'Heikentynyt',
-            '3' : 'Vaarassa',
-            '4' : 'Vakava häiriö'
-            '5' : 'Vakava häiriön (palautus)'} %}
+            1 : 'Normaali',
+            2 : 'Heikentynyt',
+            3 : 'Vaarassa',
+            4 : 'Vakava häiriö',
+            5 : 'Vakava häiriön (palautus)' } %}
           {% set state =  value_json.value %}
           {{ mapper[state] if state in mapper else 'Unknown' }}
+        json_attributes:
+          - "value"
+          - "start_time"
+          - "end_time"
