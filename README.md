@@ -4,13 +4,13 @@ Home Assistant sensor for Fingrid open API data.
 
 ## Sensors
 Currently only one simple sensor:
-- **fingrid-power-system-state** Can be used to e.g. ramp down home energy consumption (automatically or manually), when there is risk of electicity sortage. API variable ID: 209 https://data.fingrid.fi/fi/dataset/power-system-state-real-time-data
+- **fingrid-power-system-state** Can be used to e.g. ramp down home energy consumption (automatically or manually), when there is risk of electricity sortage. API variable ID: 209 https://data.fingrid.fi/fi/dataset/power-system-state-real-time-data
 
 ## Usage
-1. Register free Fingrid API key, see https://data.fingrid.fi/fi/pages/api
-2. Add API secret to your secrests.yaml -file: "fingrid_api_key: [your personal Fingrid api key]"
-4. Add sensor code to configuration.yaml
-5. Use entities on dashboards (see UI examples) and/or in automations.
+1. Register free Fingrid API key, it is easy to get. see https://data.fingrid.fi/fi/pages/api
+2. Add API secret to your secrets.yaml -file `"fingrid_api_key: [your personal Fingrid api key]"`
+4. Add sensor code to configuration.yaml -file.
+5. Use entities on dashboards (see UI examples), automations, etc.
 
 ## UI card examples:
 
