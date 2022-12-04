@@ -14,7 +14,7 @@ Currently only one simple sensor:
 
 ## UI example
 
-'''
+```
 type: entities
 entities:
   - entity: sensor.fingrid_power_system_state
@@ -23,7 +23,7 @@ type: history-graph
 entities:
   - entity: sensor.fingrid_power_system_state
     name: Fingrid
-'''
+```
 
 ![Fingrid power status dashboard example!](/examples/haas-fingrid-power-status.jpg "Fingrid power status dashboard example")
 
