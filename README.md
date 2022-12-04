@@ -7,9 +7,9 @@ Currently only one simple sensor:
 - **fingrid-power-system-state** Can be used to e.g. ramp down home energy consumption (automatically or manually), when there is risk of electricity sortage. API variable ID: 209 https://data.fingrid.fi/fi/dataset/power-system-state-real-time-data
 
 ## Usage
-1. Register free Fingrid API key, it is easy to get. see https://data.fingrid.fi/fi/pages/api
-2. Add API secret to your secrets.yaml -file `"fingrid_api_key: [your personal Fingrid api key]"`
-4. Add sensor code to configuration.yaml -file.
+1. Register free Fingrid API key, it is easy to get. See https://data.fingrid.fi/fi/pages/api
+2. Add API key to your secrets.yaml -file `"fingrid_api_key: [your personal Fingrid api key]"`
+4. Add sensor code (separate file) to configuration.yaml -file.
 5. Use entities on dashboards (see UI examples), automations, etc.
 
 ## UI card examples:
