@@ -14,7 +14,7 @@ rest:
             2 : 'Heikentynyt',
             3 : 'Vaarassa',
             4 : 'Vakava häiriö',
-            5 : 'Vakava häiriön (palautus)' } %}
+            5 : 'Vakava häiriö (palautus)' } %}
           {% set state =  value_json.value %}
           {{ mapper[state] if state in mapper else 'Unknown' }}
         json_attributes:
