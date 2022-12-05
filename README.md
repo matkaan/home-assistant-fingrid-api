@@ -27,6 +27,28 @@ entities:
 
 ![Fingrid power status dashboard example!](/examples/haas-fingrid-power-status.jpg "Fingrid power status dashboard example")
 
+## Automation examples
+
+### Send notification on all changes
+
+```
+alias: Fingrid status change notification
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - sensor.fingrid_power_system_state
+    attribute: value
+condition: []
+action:
+  - service: notify.notify
+    data:
+      message: >-
+        Fingrid: Sähköjärjestelmän tila on muuttunut, tarkista Home Assistant
+        dashboard.
+mode: single
+```
+
 ## Links
 - Fingrid open API https://api.fingrid.fi/ 
 - Fingrdi API instructions: https://data.fingrid.fi/fi/pages/api
